@@ -19,15 +19,13 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int topla = 0;
-            for (int say = 0; say < 100;say=say+3)
+            for (int i = 1; i <= 10; i++)
             {
-                topla=topla+say;
-                if (topla >=200)
-	{
-                    MessageBox.Show("limit aşıldı");
-                    break;
-	}
+                if (i < 7)
+                {
+                    continue;
+                }
+                listBox1.Items.Add(i);
             }
         }
     }
