@@ -19,9 +19,20 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            byte yuzde;
-            yuzde = Convert.ToByte(textBox1.Text);
-            progressBar1.Value = yuzde;
+            int sayi1,sayinin_karesi;
+ try
+ {
+ sayi1 = Convert.ToInt16(textBox1.Text);
+ sayinin_karesi = sayi1 * sayi1;
+ MessageBox.Show(sayinin_karesi.ToString());
+ }
+ catch
+ {
+ MessageBox.Show("Hatalı giriş yaptınız!"); }
+ finally
+ {
+ // Hata olsa da olmasa da çalışacak kodlar
+ }
         }
     }
 }
