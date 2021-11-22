@@ -19,14 +19,9 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i <= 10; i++)
-            {
-                if (i < 7)
-                {
-                    continue;
-                }
-                listBox1.Items.Add(i);
-            }
+            byte yuzde;
+            yuzde = Convert.ToByte(textBox1.Text);
+            progressBar1.Value = yuzde;
         }
     }
 }
