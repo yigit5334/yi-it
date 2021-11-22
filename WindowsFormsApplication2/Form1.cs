@@ -17,14 +17,26 @@ namespace WindowsFormsApplication2
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            bool secim; secim = checkBox1.Checked;              label2.Text = secim.ToString(); 
-        }
+            Random rnd = new Random();
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            for (int i = 0; i < 20; i++)
+            {
+                listBox1.Items.Add(rnd.Next(1000)); 
+            }
+            int say = 0, toplam = 0;
+            string deger;
 
+            while (say<listBox1.Items.Count)
+            {
+                deger = listBox1.Items[say].ToString();
+                toplam = toplam + Convert.ToInt16(deger);
+                say++;
+            }
+            MessageBox.Show(toplam.ToString());
         }
+     
+        
     }
 }
