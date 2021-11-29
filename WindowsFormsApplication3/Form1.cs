@@ -12,22 +12,25 @@ namespace WindowsFormsApplication3
 {
     public partial class Form1 : Form
     {
+        class daire
+        {
+            private int r;
+             public daire(int r)  {this.r=r;}
+            public int alanhesaplama()   {return 3*r*r;}
+            public int cevrehesalama()    {return 2*3*r;}
+
+        }   
+             
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            int dongu_say = 1;
-int toplam = 0;
-while (toplam<=1000)
-{
-toplam = toplam + dongu_say;
-dongu_say += 1;
-}
-MessageBox.Show("Döngü toplam " +
-dongu_say.ToString() + " kez çalıştı");
+            daire d1=new daire(5);
+            MessageBox.Show(d1.alanhesaplama().ToString());
+            MessageBox.Show(d1.cevrehesalama().ToString());
         }
     }
 }
