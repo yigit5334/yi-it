@@ -12,22 +12,23 @@ namespace WindowsFormsApplication5
 {
     public partial class Form1 : Form
     {
+        class bilgisayar
+        {
+            public string cpu;
+            public string ram;
+            public string disk;        
+            }
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            {
- int say=0;
- do{
- richTextBox1.Text = richTextBox1.Text + say.ToString();
- say++;
- } while (say<=30);
-} 
-	
-	         
-
-    
-
+            bilgisayar bil = new bilgisayar();
+            bil.cpu = "intel i5";
+            bil.ram = "16 gb";
+            bil.disk = "512 gb adata";
+        }
+    }
+}
