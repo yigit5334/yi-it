@@ -12,27 +12,37 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+       public class Ucgen {
+ int a;
+ int b;
+ int c;
+ public int A
+ {
+ get { return a; }
+ set
+ { if (value <= 0) Console.WriteLine("Hatalı bilgi"); else a = value; } }
+ public int B
+ {
+ get { return b; }
+ set
+ { if (value <= 0) Console.WriteLine("Hatalı bilgi"); else b = value; }
+ }
+ public int C {
+ get { return c; }
+ set
+ { if (value <= 0) Console.WriteLine("Hatalı bilgi"); else c = value; }
+ }
+}
+
+        
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            int sayi1,sayinin_karesi;
- try
- {
- sayi1 = Convert.ToInt16(textBox1.Text);
- sayinin_karesi = sayi1 * sayi1;
- MessageBox.Show(sayinin_karesi.ToString());
- }
- catch
- {
- MessageBox.Show("Hatalı giriş yaptınız!"); }
- finally
- {
- // Hata olsa da olmasa da çalışacak kodlar
- }
+
         }
     }
 }
