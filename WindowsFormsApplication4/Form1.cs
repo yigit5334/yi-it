@@ -12,23 +12,25 @@ namespace WindowsFormsApplication4
 {
     public partial class Form1 : Form
     {
+        class ogrenci
+
+    {
+
+        public string isim;
+        public int no;
+        public string sınıf;
+        }
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            int say = 1;
-            do
-            {
-                listBox1.Items.Add(say);
-                say++;
-            } while (say <= 10);  
-            
-                
+            ogrenci ogr = new ogrenci();
+            ogr.isim = "yiğit şamlı";
+            ogr.no = 123;
+            ogr.sınıf = "10/a";
         }
-                
-                
     }
 }
